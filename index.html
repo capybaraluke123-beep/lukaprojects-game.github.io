@@ -3,70 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streetcar Game | Official Portfolio</title>
+    <title>STREETCAR | High-Speed Escape</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="emergency-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+    <div class="noise"></div>
+
+    <nav>
+        <a href="#" class="logo">STREETCAR <span class="v-tag">ACTIVE_SIGNAL</span></a>
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#action">Pursuit</a></li>
+            <li><a href="#hijack">Hijack Logic</a></li>
+            <li><a href="#controls">Intel</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <nav>
-            <div class="logo">STREETCAR</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#controls">Controls</a></li>
-            </ul>
-        </nav>
+        <div class="parallax-bg" style="background-image: url('hero-bg.png');"></div>
+
+        <!-- Tactical HUD -->
+        <div class="hud hud-top-left">
+            <div class="hud-label">POLICE_LEVEL</div>
+            <div class="stars neon-red">★★★★★</div>
+        </div>
+        <div class="hud hud-top-right">
+            <div class="hud-label">CURRENT_BOUNTY</div>
+            <div class="cash-amount neon-green">$1,000,089</div>
+        </div>
+
         <div class="hero">
-            <h1>STREETCAR</h1>
-            <p>Escape the heat, hijack the ride, and stack your cash.</p>
-            <a href="#about" class="btn">Explore Gameplay</a>
+            <h1 class="glitch-text" data-text="STREETCAR">STREETCAR</h1>
+            <p class="hero-tagline">THE HIGHWAY IS YOUR ONLY ESCAPE</p>
+            <div class="hero-btns">
+                <a href="#action" class="btn btn-primary">VIEW THE HEAT</a>
+                <a href="#hijack" class="btn btn-secondary">HIJACK INTEL</a>
+            </div>
+        </div>
+
+        <div class="dispatch-feed">
+            <span class="rec-icon"></span> <strong>DISPATCH_MSG:</strong> Suspect spotted in City Biome. Stars increased to 5. Roadblocks authorized.
         </div>
     </header>
 
-    <section id="about" class="section">
-        <h2>The Ultimate Escape</h2>
-        <div class="content">
-            <p>Streetcar is a fast-paced 2D survival game where the city is your playground and the police are your shadow. Master the art of the getaway as you switch between vehicles on the fly, collect massive rewards, and survive the ever-increasing wanted level.</p>
-        </div>
-    </section>
-
-    <section id="features" class="section bg-alt">
-        <h2>Game Mechanics</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>Dynamic Wanted Level</h3>
-                <p>The longer you stay alive, the more stars you earn. High stars bring in specialized police units to hunt you down.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Car Hijacking</h3>
-                <p>Not satisfied with your ride? Press <strong>Space</strong> to jump out and commandeer any vehicle on the highway.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Economy & Shop</h3>
-                <p>Collect money bags or visit roadside shops to buy guns, mods, and new cars to stay ahead of the law.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Diverse Biomes</h3>
-                <p>Race through different environments, from the dense City blocks to specialized zones as you push your survival limits.</p>
+    <section id="mission" class="section">
+        <div class="container">
+            <h2 class="section-title">Escape the Stars</h2>
+            <div class="content grid-2">
+                <div class="text-box">
+                    <p>The longer you stay on the highway, the more stars you earn. Each star brings more aggressive police cruisers, faster interceptors, and tactical roadblocks. Collect money bags to fund your evasion and survive the ever-tightening net of the law.</p>
+                </div>
+                <div class="intel-grid">
+                    <div class="intel-stat"><span>WANTED INTENSITY</span><div class="stat-bar"><div class="fill" style="width: 95%;"></div></div></div>
+                    <div class="intel-stat"><span>POLICE AGGRESSION</span><div class="stat-bar"><div class="fill" style="width: 100%;"></div></div></div>
+                    <div class="intel-stat"><span>SURVIVAL ODDS</span><div class="stat-bar"><div class="fill" style="width: 15%;"></div></div></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="controls" class="section">
-        <h2>Master the Streets</h2>
-        <div class="controls-container">
-            <ul>
-                <li><strong>WASD / Arrows</strong> <span>Move & Steer</span></li>
-                <li><strong>Space Bar</strong> <span>Exit / Enter Vehicle</span></li>
-                <li><strong>E Key</strong> <span>Buy Items (Guns/Cars)</span></li>
-                <li><strong>F / Click</strong> <span>Shoot / Interact</span></li>
-            </ul>
+    <section id="action" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Live Pursuit Action</h2>
+            <p class="section-desc">Real-world interceptors that inspired the game's high-speed AI.</p>
+            <div class="gallery-grid">
+                <div class="gallery-card tall">
+                    <img src="https://images.unsplash.com/photo-1596728321064-3235932a1242?auto=format&fit=crop&q=80&w=1200" alt="Chase 1">
+                    <div class="card-overlay">HIGH SPEED LIGHTS</div>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?auto=format&fit=crop&q=80&w=1200" alt="Chase 2">
+                    <div class="card-overlay">INTERCEPTOR DASH</div>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=1200" alt="Chase 3">
+                    <div class="card-overlay">NIGHT PURSUIT</div>
+                </div>
+                <div class="gallery-card wide">
+                    <img src="https://images.unsplash.com/photo-1566367576585-051277d52997?auto=format&fit=crop&q=80&w=1200" alt="Chase 4">
+                    <div class="card-overlay">TACTICAL UNIT RESPONSE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hijack" class="section">
+        <div class="container">
+            <h2 class="section-title">The Hijack Logic</h2>
+            <div class="hijack-highlight">
+                <div class="hijack-step">
+                    <div class="key">SPACE</div>
+                    <p>Press to <strong>EXIT</strong> your current vehicle and hit the pavement.</p>
+                </div>
+                <div class="hijack-connector">>>></div>
+                <div class="hijack-step">
+                    <div class="key">SPACE</div>
+                    <p>Approach a target car and press again to <strong>HIJACK</strong> a new ride.</p>
+                </div>
+            </div>
+            <p class="hijack-note">Car swapping is essential for survival. A damaged car won't outrun the 5-star interceptors.</p>
+        </div>
+    </section>
+
+    <section id="controls" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Tactical Intel</h2>
+            <div class="controls-display">
+                <div class="control-box"><span>WASD</span> STEER & ACCELERATE</div>
+                <div class="control-box"><span>SPACE</span> HIJACK / EJECT</div>
+                <div class="control-box"><span>E KEY</span> OPEN BLACK MARKET</div>
+                <div class="control-box"><span>M1</span> ENGAGE SYSTEMS</div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Streetcar Game Dev. Created for the GitHub Pages Portfolio.</p>
+        <div class="footer-logo">STREETCAR</div>
+        <p>&copy; 2024 STREETCAR DEV TEAM. ALL RIGHTS RESERVED.</p>
     </footer>
 </body>
 </html>
